@@ -20,7 +20,7 @@ spec:
         - name: WEBWORK_DB_HOST
           value: db-mariadb
         - name: WEBWORK_DB_DSN
-          value: DBI:mysql:webwork:db-mariadb:${WEBWORK_DB_PORT}
+          value: DBI:mysql:webwork:db-mariadb:3306
         
         volumeMounts:
           - mountPath: /opt/webwork/courses

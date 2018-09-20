@@ -20,7 +20,7 @@ spec:
         - name: MYSQL_DATABASE
           value: webwork
         - name: MYSQL_USER
-          value: webworkWrite
+          value: "webworkWrite"
         - name: MYSQL_PASSWORD
           value: passwordRW
         

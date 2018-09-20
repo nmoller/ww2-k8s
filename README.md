@@ -56,3 +56,4 @@ On the logs page click `>|` to update the logs.
 kubectl create -f webworkdep.yaml
 ```
 
+Watch the logs of the webwork pod 
