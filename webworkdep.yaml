@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webwork
+  namespace: test001
+spec:
+  replicas: 1
+  template:
+    metadata:
+        labels:
+          app: webwork-web
+    spec:
+      containers:
+      - name: webwork
+        image: nmolleruq/webwork2:rel-ww2.14
+
+        env:
+        - name: WEBWORK_ROOT_URL
+          value: http://192.168.99.100:30070
+        - name: WEBWORK_DB_HOST
+          value: db-mariadb
+        - name: WEBWORK_DB_DSN
+          value: DBI:mysql:webwork:db-mariadb:${WEBWORK_DB_PORT}
+        
+        volumeMounts:
+          - mountPath: /opt/webwork/courses
+            name: ww-storage
+      volumes:
+      - name: ww-storage
+        persistentVolumeClaim:
+          claimName: pvc-pv02

@@ -1,0 +1,30 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: web-service-webwork
+  namespace: test001
+spec:
+  selector:
+    app: webwork-web
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+      nodePort: 30070
+      name: http
+  type: NodePort  
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-mariadb
+  namespace: test001
+spec:
+  selector:
+    app: mariadb-server
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP 
