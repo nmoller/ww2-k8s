@@ -57,3 +57,8 @@ kubectl create -f webworkdep.yaml
 ```
 
 Watch the logs of the webwork pod 
+
+
+Tadammmm...
+
+![Admin course](img/adminCourse.png)
