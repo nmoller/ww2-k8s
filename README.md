@@ -30,6 +30,10 @@ minikube dashboard
 Once the dashbord opens, you are going to need the ip there to modify accordingly the value `ENV WEBWORK_ROOT_URL`
 in the `webworkdep.yaml` file.
 
+![Cluster IP](img/minik8IP.png)
+
+In the picture case, you ar going to use: `http://192.168.99.100:30070`
+
 ### Installations
 
 [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
