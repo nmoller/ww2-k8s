@@ -111,5 +111,5 @@ Delete the content of `/mnt/sda1/hostpath_pv/pv001` in the minikube machine.
 
 :bomb:
 
-:exclamation: It is intended to be a first experiment.... so please not intended to production 
+:exclamation: It is intended to be a first experiment.... so please do not deploy in production :yum:
 
