@@ -113,3 +113,7 @@ Delete the content of `/mnt/sda1/hostpath_pv/pv001` in the minikube machine.
 
 :exclamation: It is intended to be a first experiment.... so please do not deploy in production :yum:
 
+:o: As my knowledge of `ww2` is limited, as by what I see in the table `admin_key` we have a sort of session control... I suppose the real session data goes to somewhere else and usually the default is `disk`. So after finding where the data goes... that is a candidate to be persisted (Mike, Pao ?)
+
+Maybe it is serialized in the `WeBWorKCourseAuthen.admin` cookie... it is in my question list too.
+
