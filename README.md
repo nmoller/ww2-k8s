@@ -1,12 +1,22 @@
 # Utilisation with minikube
 
+### Installations
+
+[Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+[Minikube](https://github.com/kubernetes/minikube)
+
 ### Preliminaries
 
 Have `kubectl` and `minikube` installed.
 
-Tested with version k8s 1.10.
+Tested with version k8s 1.10 in an Ubuntu 18.04.
 
-Start minikube and be sure that you are in the correct context:
+Start minikube
+```
+minikube start
+``` 
+once the bootstrap process end, be sure that you are in the correct `kubectl` context:
 ```
 kubectl config get-contexts
 ```
@@ -19,6 +29,12 @@ minikube dashboard
 
 Once the dashbord opens, you are going to need the ip there to modify accordingly the value `ENV WEBWORK_ROOT_URL`
 in the `webworkdep.yaml` file.
+
+### Installations
+
+[Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+[Minikube](https://github.com/kubernetes/minikube)
 
 ### 1 Create ns
 
