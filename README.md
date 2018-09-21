@@ -98,6 +98,8 @@ webwork-68f4bd9bb6-ftdzt   1/1       Running   1          16h
 kubectl -n test001 exec -it webwork-68f4bd9bb6-ftdzt -- bash
 ```
 
+If something goes wrong in the `persistent storage`:
+
 ```
 minikube ssh
 
