@@ -34,13 +34,7 @@ in the `webworkdep.yaml` file.
 
 ![Cluster IP](img/minik8IP.png)
 
-In the picture case, you ar going to use: `http://192.168.99.100:30070`
-
-### Installations
-
-[Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-
-[Minikube](https://github.com/kubernetes/minikube)
+In the picture case, you are going to use: `http://192.168.99.100:30070`
 
 ### 1 Create ns
 
