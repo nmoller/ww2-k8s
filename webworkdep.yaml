@@ -17,6 +17,10 @@ spec:
         env:
         - name: WEBWORK_ROOT_URL
           value: http://192.168.99.100:30070
+        - name: WEBWORK_DB_USER 
+          value: root
+        - name: WEBWORK_DB_PASSWORD 
+          value: randomepassword
         - name: WEBWORK_DB_HOST
           value: db-mariadb
         - name: WEBWORK_DB_DSN
