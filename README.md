@@ -94,6 +94,8 @@ webwork-68f4bd9bb6-ftdzt   1/1       Running   1          16h
 kubectl -n test001 exec -it webwork-68f4bd9bb6-ftdzt -- bash
 ```
 
+Dont forget to read [Docker newbie instructions](https://github.com/openwebwork/webwork2/wiki/Docker-newbie-instructions) to get some hints (`OPL-update` par example). As you can imagine the `docker exec` instruction is equivalent to `kubectl exec`.
+
 If something goes wrong in the `persistent storage`:
 
 ```
