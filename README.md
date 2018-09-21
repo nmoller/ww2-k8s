@@ -82,6 +82,11 @@ Tadammmm...
 We have a version of `WeBWork2` in kubernetes.
 
 ### Debugging in error case
+If you need to run something in the ww2 container:
+```
+kubectl -n test001 get pods
+
+```
 
 ```
 minikube ssh
