@@ -86,10 +86,16 @@ Tadammmm...
 We have a version of `WeBWork2` in kubernetes.
 
 ### Debugging in error case
-If you need to run something in the ww2 container:
+If you need to run something in the mariadb container:
 ```
-kubectl -n test001 get pods
+(master)$ kubectl -n test001 get pods
+NAME                       READY     STATUS    RESTARTS   AGE
+mariadb-65b4888f96-tpz9r   1/1       Running   1          17h
+webwork-68f4bd9bb6-ftdzt   1/1       Running   1          16h
+(master)$ kubectl -n test001 exec -it mariadb-65b4888f96-tpz9r -- mysql -u root -prandomepassword
 
+# In the ww2 container :
+kubectl -n test001 exec -it webwork-68f4bd9bb6-ftdzt -- bash
 ```
 
 ```
