@@ -8,6 +8,8 @@
 
 ### Preliminaries
 
+The original diagram of what is implemented: [One note link](https://1drv.ms/f/s!AlNsK5gd2-LsgSrhNY3P7pbtUbkO)
+
 Have `kubectl` and `minikube` installed.
 
 Tested with version k8s 1.10 in an Ubuntu 18.04.
@@ -27,7 +29,7 @@ To monitor that everything goes as expected, open the k8s dashboard with the com
 minikube dashboard
 ```
 
-Once the dashbord opens, you are going to need the ip there to modify accordingly the value `ENV WEBWORK_ROOT_URL`
+Once the dashboard opens, you are going to need the ip there to modify accordingly the value `ENV WEBWORK_ROOT_URL`
 in the `webworkdep.yaml` file.
 
 ![Cluster IP](img/minik8IP.png)
