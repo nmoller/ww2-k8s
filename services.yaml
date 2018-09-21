@@ -12,7 +12,8 @@ spec:
       targetPort: 80
       nodePort: 30070
       name: http
-  type: NodePort  
+  type: NodePort 
+  sessionAffinity: ClientIP 
 
 ---
 apiVersion: v1
