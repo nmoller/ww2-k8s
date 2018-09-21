@@ -62,3 +62,25 @@ Watch the logs of the webwork pod
 Tadammmm...
 
 ![Admin course](img/adminCourse.png)
+
+We have a version of `WeBWork2` in kubernetes.
+
+### Debugging in error case
+
+```
+minikube ssh
+
+cd /mnt/sda1/hostpath_pv/pv002
+sudo rm -rf admin
+```
+
+To rebuild the database:
+
+Delete the content of `/mnt/sda1/hostpath_pv/pv001` in the minikube machine.
+
+### Disclaimer
+
+:bomb:
+
+:exclamation: It is intended to be a first experiment.... so please not intended to production 
+
