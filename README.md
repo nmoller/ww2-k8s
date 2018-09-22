@@ -36,6 +36,11 @@ in the `webworkdep.yaml` file.
 
 In the picture case, you are going to use: `http://192.168.99.100:30070`
 
+### Init Htdocs
+
+The docker image created with the Dockerfile in this repo is `nmolleruq/ww2inithtdocs` its function is to initialise the shared folder htdocs.
+
+
 ### 1 Create ns
 
 ```
@@ -47,6 +52,26 @@ kubectl create ns test001
 ```
  kubectl create -f disks.yaml
 ```
+
+### 2.5 Populate shared folder
+
+```
+kubectl create -f initHtdocsPod.yaml
+```
+
+Watch the end of the downwloading by following the status of `inithtdocs` pod
+```
+kubectl -n test001 get pods --show-all=true
+NAME                       READY     STATUS    RESTARTS   AGE
+inithtdocs                 1/1       Running   0          8s
+```
+Wait until the `Completed` status:
+```
+kubectl -n test001 get pods --show-all=true
+NAME                       READY     STATUS      RESTARTS   AGE
+inithtdocs                 0/1       Completed   0          4m
+```
+
 
 ### 3 Create the services 
 

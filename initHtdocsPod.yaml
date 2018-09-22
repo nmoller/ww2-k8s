@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inithtdocs
+  namespace: test001
+spec:
+  restartPolicy: Never
+  containers:
+  - name: inithtdocs
+    image: nmolleruq/ww2inithtdocs:latest
+
+    volumeMounts:
+      - mountPath: /opt/webwork/webwork2/htdocs
+        name: ww-htdocs
+
+  volumes:
+  - name: ww-htdocs
+    persistentVolumeClaim:
+      claimName: pvc-pv03

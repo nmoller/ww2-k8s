@@ -29,7 +29,12 @@ spec:
         volumeMounts:
           - mountPath: /opt/webwork/courses
             name: ww-storage
+          - mountPath: /opt/webwork/webwork2/htdocs
+            name: ww-htdocs
       volumes:
       - name: ww-storage
         persistentVolumeClaim:
           claimName: pvc-pv02
+      - name: ww-htdocs
+        persistentVolumeClaim:
+          claimName: pvc-pv03
