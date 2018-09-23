@@ -144,3 +144,23 @@ Delete the content of `/mnt/sda1/hostpath_pv/pv001` in the minikube machine.
 
 Maybe it is serialized in the `WeBWorKCourseAuthen.admin` cookie... it is in my question list too.
 
+### Helming
+
+Installing
+
+[Helm](https://docs.helm.sh/using_helm/)
+
+Look for an stable chart:
+
+```
+helm fetch stable/moodle
+# currently wou are going to have: moodle-0.4.3.tgz
+```
+
+I'll use that chart as the basis for the `webwork` one.
+
+To bootstrap the chart dev, we are going to start with the result of
+```
+tar -zxf moodle-0.4.3.tgz
+```
+in our `incubator/webwork` folder.
