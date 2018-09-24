@@ -1,7 +1,7 @@
-## Bitnami Moodle` image version
-## ref: https://hub.docker.com/r/bitnami/moodle/tags/
+## NMoller version
+## ref: https://github.com/openwebwork/webwork2/blob/develop
 ##
-image: bitnami/moodle:3.4.1-r0
+image: nmolleruq/webwork2:rel-ww2.14
 
 ## Specify a imagePullPolicy
 ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -10,22 +10,22 @@ image: bitnami/moodle:3.4.1-r0
 imagePullPolicy: IfNotPresent
 
 ## User of the application
-## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
+## ref: https://github.com/openwebwork/webwork2/blob/develop
 ##
-moodleUsername: user
+webworkUsername: user
 
 ## Application password
 ## Defaults to a random 10-character alphanumeric string if not set
-## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
+## ref: https://github.com/openwebwork/webwork2/blob/develop
 ##
-# moodlePassword:
+# webworkPassword:
 
 ## Admin email
-## ref: https://github.com/bitnami/bitnami-docker-moodle#configuration
-moodleEmail: user@example.com
+## ref: https://github.com/openwebwork/webwork2/blob/develop
+webworkEmail: user@example.com
 
 ## SMTP mail delivery configuration
-## ref: https://github.com/bitnami/bitnami-docker-moodle/#smtp-configuration
+## ref: https://github.com/openwebwork/webwork2/blob/develop
 # smtpHost:
 # smtpPort:
 # smtpUser:
@@ -92,30 +92,30 @@ serviceType: LoadBalancer
 
 ## Optionally, create ingress controller
 ingress:
-  ## If true, Moodle server Ingress will be created
+  ## If true, webwork server Ingress will be created
   ##
   enabled: false
 
-  ## Moodle server Ingress annotations
+  ## webwork server Ingress annotations
   ##
   annotations: {}
   #   kubernetes.io/ingress.class: nginx
   #   kubernetes.io/tls-acme: 'true'
 
-  ## Moodle server Ingress hostnames
+  ## webwork server Ingress hostnames
   ## Must be provided if Ingress is enabled
   ##
   hosts: []
-  #   - moodle.domain.com
+  #   - webwork.domain.com
 
-  ## Moodle server Ingress TLS configuration
+  ## webwork server Ingress TLS configuration
   ## Secrets must be manually created in the namespace
-  ## kubectl create secret tls moodle-server-tls --cert=tls.crt --key=tls.key
+  ## kubectl create secret tls webwork-server-tls --cert=tls.crt --key=tls.key
   ##
   tls: []
-  #   - secretName: moodle-server-tls
+  #   - secretName: webwork-server-tls
   #     hosts:
-  #       - moodle.domain.com
+  #       - webwork.domain.com
 
 ## Enable persistence using Persistent Volume Claims
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
@@ -134,7 +134,7 @@ persistence:
   size: 8Gi
   # existingClaim: ""
 
-## Define affinity for the moodle pod
+## Define affinity for the webwork pod
 ## Sometimes required when persistent volumes are defined externally
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
 # affinity:
