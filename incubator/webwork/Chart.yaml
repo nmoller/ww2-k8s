@@ -1,18 +1,23 @@
-appVersion: 3.4.1
-description: Moodle is a learning platform designed to provide educators, administrators
-  and learners with a single robust, secure and integrated system to create personalised
-  learning environments
+appVersion: 2.13
+description: WeBWorK is an open-source online homework system for math and sciences 
+courses. WeBWorK is supported by the MAA and the NSF and comes with an 
+Open Problem Library (OPL) of over 30,000 homework problems. Problems in the OPL 
+target most lower division undergraduate math courses and some advanced courses. 
+Supported courses include college algebra, discrete mathematics, probability 
+and statistics, single and multivariable calculus, differential equations, 
+linear algebra and complex analysis.
 engine: gotpl
-home: http://www.moodle.org/
-icon: https://bitnami.com/assets/stacks/moodle/img/moodle-stack-110x117.png
+home: http://webwork.maa.org/
+icon: http://webwork.maa.org/images/webwork_logo.png
 keywords:
-- moodle
+- webwork
 - learning
-- php
+- math
+- maa
 maintainers:
-- email: containers@bitnami.com
-  name: Bitnami
-name: moodle
+- email: nmoller.c@gmail.com
+  name: WeBWorK
+name: webwork
 sources:
-- https://github.com/bitnami/bitnami-docker-moodle
-version: 0.4.3
+- https://github.com/openwebwork/webwork2/blob/develop
+version: 0.1.1
