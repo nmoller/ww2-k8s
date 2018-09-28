@@ -164,3 +164,25 @@ To bootstrap the chart dev, we are going to start with the result of
 tar -zxf moodle-0.4.3.tgz
 ```
 in our `incubator/webwork` folder.
+
+To debug `helm` .... I do not mean deploy it to the server, I mean generate the manifests to pass to `k8s`:
+
+```
+cd incubator
+# if you only want to generate the service manifest
+helm template webwork -x templates/svc.yaml
+
+# if you want to generate everything 
+helm template webwork
+```
+
+:hand: The chart is the persistance in webwork is not updated.
+
+
+As I'm used to an env where we dont have the right to helm in our cluster, well you can do the same job using
+
+```
+helm template webwork | tee webworkStack.yaml
+kubectl -n test001 create -f webworkStack.yaml
+```
+If you want to be safe .... add the namespace to the templates 
