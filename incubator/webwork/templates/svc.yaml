@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "moodle.fullname" . }}
+  name: {{ template "webwork.fullname" . }}
   labels:
-    app: {{ template "moodle.fullname" . }}
+    app: {{ template "webwork.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -17,4 +17,4 @@ spec:
     port: 443
     targetPort: https
   selector:
-    app: {{ template "moodle.fullname" . }}
+    app: {{ template "webwork.fullname" . }}
